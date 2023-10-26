@@ -1,0 +1,29 @@
+### Bash script for creating important plots. ###
+
+#!/bin/bash
+
+# Set the input and output directories
+### --- DDD17 --- ###
+EXP_DIR=/mnt/Seagate/DDD17/ddd17/model
+TEST_DIR=/mnt/Seagate/DDD17/ddd17/model/data/testing
+TRAIN_DIR=/mnt/Seagate/DDD17/ddd17/model/data/training
+VAL_DIR=/mnt/Seagate/DDD17/ddd17/model/data/validation
+
+### --- DDD20 --- ###
+#EXP_DIR=/mnt/seagate/DDD17/ddd20/model
+#TEST_DIR=/mnt/seagate/DDD17/ddd20/model/data/testing
+#TRAIN_DIR=/mnt/seagate/DDD17/ddd20/model/data/training
+#VAL_DIR=/mnt/seagate/DDD17/ddd20/model/data/validation
+
+# --- Plot results of the experiments ---
+echo -e "\n\n### Plots results for DVS frames... ###"
+python3.6 ./plot_results.py --experiment_rootdir $EXP_DIR/dvs
+python3.6 ./plot_loss.py --experiment_rootdir $EXP_DIR/dvs
+echo -e "Done creating DVS plots...\n\n"
+
+echo -e "\n\n### Plots results for APS frames... ###"
+python3.6 ./plot_results.py --experiment_rootdir $EXP_DIR/aps
+python3.6 ./plot_loss.py --experiment_rootdir $EXP_DIR/aps
+echo -e "Done creating APS plots...\n\n"
+
+echo -e "\n\n ### -------------------------------------------------- ### \n\n"
