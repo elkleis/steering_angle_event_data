@@ -84,6 +84,6 @@ DDD17/
 
 Authors also provide some [code](https://code.ini.uzh.ch/jbinas/ddd17-utils) for viewing and exporting the data. Download the repository and copy the files within the ```data_preprocessing``` directory.
 
-Asynchronous events are converted into synchronous event frames by pixel-wise accumulation over a constant time interval, using separate channels for positive and negative events. To prepare the data in the proper format run the bash script  ``data_preprocessing/.sh``.
+Asynchronous events are converted into synchronous event frames by pixel-wise accumulation over a constant time interval, using separate channels for positive and negative events. To prepare the data in the proper format run the bash script  ``data_preprocessing/pre-processing.sh``.
 
 
